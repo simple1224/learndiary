@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../CSS/demo.css">
+</head>
+<body>
+    <div class="introduce">
+        <h1>第二章CSS</h1>
+        <h2>css的简介</h2>
+        <p>CSS全称为 <span>“层叠样式表 (Cascading Style Sheets)”</span>，它主要是用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等</p>
+        <p>css 样式由选择符和声明组成，而声明又由属性和值组成。p{color:red;font-size:22px}其中p为选择符，color为属性，：后面的为声明，red为值。<br>
+              文字的大小设置用 <span>font-size</span>来设置,font-weight设置字体加粗 <br>
+            css的注释格式为“/**/”</p>
+        <p style="color:deeppink">CSS 样式代码插入的形式来看基本可以分为以下3种：内联式、嵌入式和外部式三种。
+            三种样式的优先级为内联式>嵌入式>外部式</p>
+    </div>
+    <div class="basic">
+        <h2>CSS选择器</h2>
+       <ul>
+            <li>选择器包括标签选择器,比如“img、html”；</li>
+            <li>类选择器“.类选器名称{css样式代码;}”；</li>
+            <li>ID选择器：具有唯一标识性；</li>
+            <li>子选择器：即大于符号(>),用于选择指定标签元素的第一代子元素 比如.basic>p{}可以对basic下的p标签做设置。</li>
+            <li>后代选择器：即用空格  .basic p{}就是对basic下的所有子标签做设置；通用选择器*｛｝即对HTML的所有标签设置</li>
+            <li>伪类选择符：允许给HTML不存在的标签做设置 比如在鼠标划过超链接时改变颜色 <a href="http://baidu.com" target="_blank">
+                点击我可以跳转到百度页面 因为兼容性的问题目前经常使用a:hover组合</a></li>
+            <li>分组选择器：给不同的标签设置相同的样式 </li>
+       </ul>
+    </div>
+    <div class="a">
+        <h2>CSS的继承和叠层</h2>
+        <p>CSS中某些样式具有继承性，比如某种颜色应用于p标签，那么p标签的子元素文本即span标签的内容会跟着改变
+        有些属性不具有 <span>继承性</span>，比如给p标签加入border:1px solid red，span标签内的样式不会变。</p>
+        <p class="aa">CSS的特殊性：当为同一个元素设置不同的CSS样式，那么此时用权值来判断，程序会执行权值高的样式。
+        id的权值是100，类选择器的权值是10，标签的权值是1，继承的权值是0.1。</p>
+        <p>CSS的层叠:同一个标签给它设置不同的样式，程序会执行最后一个样式。比如先给p标签设置字体为红色，
+            下面再写一个字体颜色为green，最后显示的文本为绿色。</p>
+        <p>CSS的重要性:再写网页时，有特殊情况要对某些样式设置最高权值来显示样式，这时使用！important。注意续写在分号之前</p>
+    </div>
+</body>
+</html>

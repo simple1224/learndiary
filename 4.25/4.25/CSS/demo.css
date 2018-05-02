@@ -1,0 +1,42 @@
+.introduce{
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+}
+p{
+    font-size: 20px;
+    color:#000000;
+    /*font-weight: bold;*/
+}
+span{
+    color: cornflowerblue;
+}
+h1{
+    text-align: center;
+}
+.basic{
+    width: 100%;
+    height: auto;
+    background-color: cornflowerblue;
+}
+.basic ul{
+    color:orangered;
+}
+a:hover{
+    color: black;
+}
+.basic>h2,ul{
+    font-size: 16px;
+}
+.a{
+    width: 100%;
+    height: auto;
+    background-color: orange;
+}
+.a>p{
+    color: green!important;/*css的重要性*/
+    border:1px solid red;
+}
+.a>p{
+    color: blue;
+}

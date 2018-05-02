@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <div class="one">
+        <h1>CSS代码缩写，占用更少的宽带</h1>
+        <p>虽然CSS文件或者嵌入的CSS都纯文本文件，为了减少css样式代码的编写量，
+            代码缩写是很有必要的。这样可以使用户访问你的网页的时候占用更少的带宽。</p>
+        <h2>盒模型代码简写</h2>
+        <p>盒模型时外边距(margin)、内边距(padding)和边框(border)
+            设置上下左右四个方向的边距是按照顺时针方向设置的：上右下左。</p>
+        <ul>一般是margin：10px 11px 12px 13px;设置上为10px 右为11px等。
+            有三种缩写方法：
+            <li>如果上右下左的值都相同，那么可以缩写为margin：10px;</li>
+            <li>如果上下的值相同，左右的值相同，那么可以缩写为margin：10px(上下) 20px(左右)</li>
+            <li>如果左右的值相同，那么可以缩写为margin：10px(top) 20px(左右) 24px(bottom)</li>
+        </ul>
+        <h2>颜色值缩写</h2>
+        <p>关于颜色的css样式也是可以缩写的，当你设置的颜色是16进制的色彩值时，如果每两位的值相同，可以缩写一半。</p>
+        <p>比如#000000可以缩写为#000  &nbsp;&nbsp; #336699可以缩写为#369</p>
+        <h2>字体缩写</h2>
+        <pre>
+            body{
+            font-style:italic;
+            font-variant:small-caps;
+            font-weight:bold;
+            font-size:12px;
+            line-height:1.5em;
+            font-family:"宋体",sans-serif;
+            }
+        </pre>
+        <p>像上面的代码可以缩写为一句 <code>body{
+            font:italic  small-caps  bold  12px/1.5em  "宋体",sans-serif;
+            }</code></p>
+        <p>需要注意的是：1、使用这一简写方式你至少要指定 font-size 和 font-family 属性，
+            其他的属性(如 font-weight、font-style、font-variant、line-height)如未指定将自动使用默认值。
+            2、在缩写时 font-size 与 line-height 中间要加入“/”斜扛。</p>
+    </div>
+    <div class="two">
+        <h2>单位和值</h2>
+        <h3>颜色值</h3>
+        <p>在网页中的颜色设置是非常重要，有字体颜色（color）、背景颜色（background-color）、
+            边框颜色（border）等，设置颜色的方法也有很多种：</p>
+        <p>一般颜色值的设置有3钟方法：
+        </p>
+        <p>1、英文命名颜色 <code>p{color:red;}</code></p>
+        <p>2、RGB颜色：通过red、green、blue三种颜色的比例来配色，每一项的值可以使0~255的整数，
+            也可以是0%~100%的百分比<code>p{color:rgb(133,45,200);}</code></p>
+        <p>3、十六进制颜色：这种颜色配置是目前较为偶变使用的颜色配置方法，原理与RGB配色原理一样
+            只是将0~255变为十六进制的00~ff</p>
+        <h3>长度值</h3>
+        <p>长度单位总结一下，目前比较常用到px（像素）、em、% 百分比，要注意其实这三种单位都是相对单位。</p>
+        <p>1、像素：像素为什么是相对单位呢？因为像素指的是显示器上的小点（CSS规范中假设“90像素=1英寸”）。
+            实际情况是浏览器会使用显示器的实际像素值有关，在目前大多数的设计者都倾向于使用像素（px）作为单位。</p>
+        <p>2、em：就是本元素给定字体的 font-size 值，如果元素的 font-size 为 14px ，那么 1em = 14px；
+            如果 font-size 为 18px，那么 1em = 18px。<code>p{font-size:12px;text-indent:2em;}</code>
+            这时缩进为24px就是两个字体的距离。</p>
+        <p>注意：但当给 font-size 设置单位为 em 时，此时计算的标准以 p 的父元素的 font-size 为基础
+        <code>p{font-size:14px}
+            span{font-size:0.8em;}</code>那么span中文本的字体就为11.2px（14 * 0.8 = 11.2px）。</p>
+        <p>3、百分比 <code>p{font-size:12px;line-height:130%}</code>
+            此时行高（行间距）为字体的130%（12 * 1.3 = 15.6px）</p>
+    </div>
+    <div class="three">
+        <h2>CSS样式设置小技巧</h2>
+        <h3>水平居中设置</h3>
+        <h4>行内元素</h4>
+        <p>如果被设置元素为文本、图片等行内元素时，水平居中是通过给父元素设置 text-align:center 来实现的。
+        比如要段落的文本居中显示，就要为p标签所在的父元素即class="three"中设置。</p>
+        <h4>块状元素</h4>
+        <p>当被设置的元素为块状元素时，text-align='center'就失效了。此时分为两种情况：定宽块状元素和不定宽块状元素。</p>
+            <h5>定宽块装元素：块状元素的宽度width为固定值。</h5>
+              <p>居中的方式：满足定宽和块状两个条件的元素是可以通过设置“左右margin”值为“auto”来实现居中的。</p>
+            <h5>不定宽块状元素：块状元素的宽度width不固定。</h5>
+            <p>居中的方式有3种：
+            <li>加入 table 标签： 是利用table标签的长度自适应性---即不定义其长度也不默认父元素body的长度（table其长度根
+             据其内文本长度决定），因此可以看做一个定宽度块元素，然后再利用定宽度块状居中的margin的方法，使其水平居中。<br>
+            第一步：为需要设置的居中的元素外面加入一个 table 标签 ( 包括 tbody、tr、td )。<br>
+            第二步：为这个 table 设置“左右 margin 居中”（这个和定宽块状元素的方法一样）。
+    </li>
+            <li>设置 display: inline 方法：与第一种类似，显示类型设为 行内元素，进行不定宽元素的属性设置。<br>
+                这种方法相比第一种方法的优势是不用增加无语义标签，缺点是不能设置行内元素的长度值</li>
+            <li>设置 position:relative 和 left:50%：利用 相对定位 的方式，将元素向左偏移 50% ，即达到居中的目的 <br>
+                通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，
+                子元素设置 position:relative 和 left: -50% 来实现水平居中。</li>
+            </p>
+        <!--例子说明-->
+        <!--方式1 加入table标签-->
+        <table>
+            <tr><td>
+                <div id="center1">设置我所在的div居中</div>
+            </td></tr>
+        </table>
+        <!--方式2 改变块级元素的display为inline，然后再使用text-align：center来实现居中-->
+        <div id="center2">把我变成行内元素啦</div>
+        <!--方式3 通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，
+        子元素设置 position:relative 和 left: -50% 来实现水平居中。-->
+        <div id="center3">
+            <ul>
+                <li>hello</li>
+                <li>everybody</li>
+            </ul>
+        </div>
+        <h3>垂直居中</h3>
+        <h4>父元素高度确定的单行文本</h4>
+        <p>父元素高度确定的单行文本的竖直居中的方法是通过设置父元素的 height 和 line-height 高度一致来实现的。<br>
+            (height: 该元素的高度，line-height: 顾名思义，行高（行间距），指在文本中，行与行之间的 基线间的距离 )。</p>
+        <h4>父元素高度确定的多行文本</h4>
+        <ul>
+            <li>方法一：使用插入 table  (包括tbody、tr、td)标签，同时设置 vertical-align：middle。<br>
+                css中有一个用于竖直居中的属性 vertical-align，在父元素设置此样式时，会对inline-block类型的子元素都有用。<br>
+                注：因为 td 标签默认情况下就默认设置了 vertical-align 为 middle，所以我们不需要显式地设置了。</li>
+            <li>方法二：在 chrome、firefox 及 IE8 以上的浏览器下可以设置块级元素的 display 为 table-cell（设置为表格单元显示），<br>
+                激活 vertical-align 属性，但注意 IE6、7 并不支持这个样式, 兼容性比较差。</li>
+        </ul>
+        <!--父元素高度确定的多行文本1-->
+        <table><tbody><tr><td class="wrap">
+            <div>
+                <p>看我是否可以居中。</p>
+            </div>
+        </td></tr></tbody></table>
+        <!--父元素高度确定的多行文本2-->
+        <div class="container">
+            <div>
+                <p>看我是否可以居中。</p>
+                <p>看我是否可以居中。</p>
+                <p>看我是否可以居中。</p>
+            </div>
+        </div>
+        <h3>隐性改变display属性</h3>
+        <p>有一个有趣的现象就是当为元素（不论之前是什么类型元素，display:none 除外）设置以下 2 个句之一： <br>
+            1. position : absolute <br>
+            2. float : left 或 float:right <br>
+            即只要html代码中出现以上两句之一，元素的display显示类型就会自动变为以 display:inline-block（块状元素）
+            的方式显示，当然就可以设置元素的 width 和 height 了，且默认宽度不占满父元素。</p>
+        <p>例如为a标签设置position：absolute之后，a标签就由行内元素变为块状元素，可以为其设置宽和高了。</p>
+    </div>
+</body>
+</html>

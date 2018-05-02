@@ -1,0 +1,29 @@
+.container{
+    text-align:center;
+}
+.container ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:inline;
+}
+.container li{
+    margin-right:8px;
+    display:inline;
+}
+
+
+.wrap{
+
+    float: right;
+    position: relative;
+    right: 50%;
+}
+.wrap_center{
+    height: 300px;
+    background: #FFCCCC;
+    position: relative;
+    text-align: center;
+    line-height: 300px;
+    right: -50%;
+}

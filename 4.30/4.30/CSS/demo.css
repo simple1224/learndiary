@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin-left: 30%;
+    margin-top: 10%;
+}
+div{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;/*把div的背景设置为透明色*/
+    border: 10px solid ;
+    border-radius: 50%;/*把div的方框变成圆角*/
+}
+.a1{
+    border-color: red;
+    display: inline-block;
+}
+.a2{
+    border-color: blue;
+    display: inline-block;
+    margin-left: -4px;
+}
+.a3{
+     border-color: black;
+    display: inline-block;
+    position: relative;
+    margin-left: -4px;
+ }
+.a4{
+    border-color: yellow;
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    left: 43%;
+  }
+.a5{
+    border-color: green;
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    left: 34%;
+}

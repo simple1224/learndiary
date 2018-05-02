@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../CSS/demo.css">
+</head>
+<body>
+    <div class="one">
+       <h1>CSS格式排版</h1>
+        <h2>文字排版</h2>
+        <p class="a">1、字体的设置用font-family来设置</p>
+        <p class="b">2、字体的大小设置：font-size</p>
+        <p class="c">3、字体的颜色设置：color</p>
+        <span>4、字体的加粗设置：font-weight：bold</span>
+        <p class="d">5、字体的斜体设置：font-style：italic</p>
+        <p class="e">6、字体的下划线设置：text-decoration:underline</p>
+        <p class="f">7、字体的删除线设置：text-decoration:line-through</p>
+        <h2>段落排版</h2>
+        <p class="g">1、段落的缩进：text-indent:2em</p>
+        <p class="h">2、行间距：line-height:1.8em</p>
+        <p class="i">3、中文字间距以及字母字间距：letter-spacing：50px;</p>
+        <p class="j">4、单词间距设置：word-spacing:25px;welcome to here</p>
+        <p class="k">5、为块状元素设置对齐方式：text-align:center</p>
+    </div>
+    <div class="two">
+        <h1>CSS盒子模型</h1>
+        <p id="a">盒模型是CSS布局的基石，它规定了网页元素如何显示以及元素间相互关系。
+        本章将围绕盒模型的概念、结构、尺寸等基础知识展开研究，以便为后面的学习和日后网页设计奠定扎实的基础。</p>
+        <h2>元素分类</h2>
+        <p>元素分类：HTML中的标签元素大体分为三种类型：块状元素、内联元素、内联块状元素。</p>
+        <p>块状元素有div、p、hx、ol、ul、dl、table、address、blockquote、form </p>
+        <p>行内元素：a、span、br、i、em、strong、label、q、var、cite、code </p>
+        <p>内联块元素：img、input</p>
+        <p class="aa">块元素就是独占一行，可以设置高度和宽度。行内元素就是可以和其他行内元素显示在同一行，不占有独立的区域 ，
+            仅仅靠字体大小和图片尺寸来支撑，一般来说不可以设置高和宽。内联块元素 就是仅有块的特点也有行内元素的特点
+            可以为其设置宽和高。一般用display：inline-block来设置。</p>
+        <h3>块级元素</h3>
+        <p>内联元素a转换为块状元素 dispaly:block 。行内元素变为块级元素可以设置高度和宽度。<span>高度不可设置？</span>
+            <a href="http://baidu.com" target="_blank" id="d">我已经变成块级元素啦！</a></p>
+        <ul>特点：
+            <li>每个块级元素都从新的一行开始，并且其后的元素也另起一行。（真霸道，一个块级元素独占一行）</li>
+            <li>元素的高度、宽度、行高以及顶和底边距都可设置。</li>
+            <li>元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度。</li>
+        </ul>
+        <h3>内联元素</h3>
+        <div id="b">块状元素div转换为内联元素：display：inline。块元素变成行元素，高度和宽度的设置失效。</div>
+        <div id="c">我现在变成行级元素啦</div>
+        <ul>特点:
+            <li>和其他元素都在一行上</li>
+            <li>元素的高度、宽度及顶部和底部边距不可设置；</li>
+            <li>元素的宽度就是它包含的文字或图片的宽度，不可改变</li>
+        </ul>
+        <h3>内联块状元素</h3>
+        同时具备内联元素、块状元素的特点，代码display:inline-block就是将元素设置为内联块状元素。<br>
+        <span>a标签文本局中设置无效？</span>
+        <ul>特点：
+            <li>和其他元素都在一行上；</li>
+            <li>元素的高度、宽度、行高以及顶和底边距都可设置。</li>
+            <a href="" class="bb">1</a>
+            <a href="" class="bb">2</a>
+            <a href="" class="bb">3</a>
+            <a href="" class="bb">4</a>
+        </ul>
+        <h2>盒子模型</h2>
+        <p>块级元素具备盒子模型的特点。盒子模型是由内容、padding、border、margin组成。</p>
+        <h3>边框</h3>
+        <p>盒子模型的边框就是围绕着内容及补白的线，这条线你可以设置它的粗细、样式和颜色(边框三个属性)。<br>
+            方式1：border:2px  solid  red;<br>
+            方式2： border-width:2px;
+                    border-style:solid;
+                    border-color:red;</p>
+        <p>一般来说边框样式border-style分为三种：dashed虚线、dotted点线、solid实线；宽度一般用像素设置</p>
+        <p>为一个标签设置单独的下边框：border-bottom:2px soild red</p>
+        <h3>宽度和高度</h3>
+        <p>一个元素的真实wight（盒子的宽）=内容的实际像素+两侧的padding+两侧的border+两侧的margin</p>
+        <p>一个元素的真实height（盒子的高）=内容的实际像素+上下的padding+上下的border+上下的margin</p>
+        <div class="box">
+        </div>
+        <h3>填充与边界</h3>
+        <p>内容与边框之间的距离称为填充。填充可以分为上、右、下、左，比如padding-top。
+            如果上下的填充一样为10px，左右的填充一样为10px，比如padding：10px 10px；<br>
+            元素与元素之间的距离称为边界。边界也可以分为四个方向，同上。<br>
+            padding和margin的区别，padding在边框里，margin在边框外。</p>
+    </div>
+    <div class="three">
+    <h2>CSS布局模型</h2>
+        <p>CSS包含3种基本的布局模型，用英文概括为：Flow、Layer 和 Float。
+            在网页中，元素有三种布局模型：
+            1、流动模型（Flow）
+            2、浮动模型 (Float)
+            3、层模型（Layer）</p>
+        <h3>流动模型</h3>
+        <p>流动模型，流动（Flow）是默认的网页布局模式。
+        也就是说网页在默认状态下的 HTML 网页元素都是根据流动模型来分布网页内容的。</p>
+        <ul>特点：
+            <li>块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。
+                实际上，块状元素都会以行的形式占据位置。</li>
+            <li>在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示。
+                （内联元素可不像块状元素这么霸道独占一行）</li>
+        </ul>
+        <h3>浮动模型</h3>
+        用float属性来实现两个块级元素并排显示。
+        <div class="left"></div>
+        <div class="right"></div>
+        <h3>层模型</h3>
+        <p> 层布局模型就像是图像软件PhotoShop中非常流行的图层编辑功能一样，每个图层能够精确定位操作，但在网页设计领域，
+            由于网页大小的活动性，层布局没能受到热捧。但是在网页上局部使用层布局还是有其方便之处的。</p>
+        <p> 如何让html元素在网页中精确定位，就像图像软件PhotoShop中的图层一样可以对每个图层能够精确定位操作。
+            CSS定义了一组定位（positioning）属性来支持层布局模型。</p>
+        <p> 层模型分为三种形式：1、绝对定位(position: absolute) 2、相对定位(position: relative) 3、固定定位(position: fixed)</p>
+        <h4>绝对定位</h4>
+        <p> 如果想为元素设置层模型中的绝对定位，需要设置position:absolute(表示绝对定位)，这条语句的作用将元素从文档流中拖出来，
+            然后使用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。
+            如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。</p>
+        <p> 例如想把一个div相对于浏览器窗口向右移动20px，那就要设置position:absolute;left：20px;</p>
+        <div class="absolute"></div>
+        <h4>相对定位</h4>
+        <p> 如果想为元素设置层模型中的相对定位，需要设置position:relative（表示相对定位），它通过left、right、top、bottom属性
+            确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static(float)方式生成一个元素(并且元素像层一样浮动了起来)，
+            然后相对于以前的位置移动，移动的方向和幅度由left、right、top、bottom属性确定，偏移前的位置保留不动。</p>
+        <div class="relative"></div>
+        <h4>固定定位</h4>
+        <p>fixed：表示固定定位，与absolute定位类型类似，但它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，
+            它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，
+            因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响，这与background-attachment:fixed;属性功能相同</p>
+        <div class="fixed"></div>
+        <h4>Relative与Absolute组合使用</h4>
+        <p>1、参照定位的元素必须是相对定位元素的前辈元素</p>
+        <p>2、参照定位的元素必须加入position:relative</p>
+        <p>3、定位元素加入position:absolute，便可以使用top、bottom、left、right来进行偏移定位了。</p>
+        <div class="box1">
+            <div class="box2">
+                <p>我还是个漂亮的小姑娘</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

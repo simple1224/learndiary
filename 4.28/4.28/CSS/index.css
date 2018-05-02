@@ -1,0 +1,58 @@
+div{
+    width: 100%;
+    height: auto;
+    /*text-align: center;*/
+    border-bottom: orangered 2px solid;
+}
+h1{
+  text-align: center;
+}
+p,h2{
+    text-indent: 2em;
+}
+li{
+    margin: 10px 20px 13px;/*为li标签设置外边距  即元素与元素之间的距离：top为10px 左右为20 bottom为13px*/
+}
+/*不定宽的居中设置*/
+/*1、用table来设置居中*/
+#center1{
+    background-color: palevioletred;
+}
+table{
+    margin: 0 auto;/*设置定宽的元素的margin左右为auto*/
+}
+
+/*2、用display来设置居中*/
+#center2{
+    background-color: palevioletred;
+    display: inline;
+    text-align: center;
+    clear: both;
+}
+/*3、利用相对定位的方式来实现居中*/
+#center3{
+    background-color: cornflowerblue;
+    float: left;
+    position: relative;
+    left: 50%;
+}
+#center3>ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: -50%;
+}
+#center3>li{
+    float: left;
+}
+/*父元素确定的多行文本垂直居中1*/
+.wrap>table td{height:500px;background:#ccc}
+/*因为 td 标签默认情况下就默认设置了 vertical-align 为 middle，所以我们不需要显式地设置了。*/
+/*父元素高度确定的多行文本2*/
+.container{
+    height:300px;
+    background:#ccc;
+    display:table-cell;/*IE8以上及Chrome、Firefox*/
+    vertical-align:middle;/*IE8以上及Chrome、Firefox*/
+}

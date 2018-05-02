@@ -1,0 +1,147 @@
+*{
+    text-indent: 2em;
+}
+.one,.two,.three{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+.one{
+    background-color: cornflowerblue;
+}
+h1{
+    text-align: center;
+}
+.a{
+    font-family: "Adobe Gothic Std B";
+}
+.b{
+    font-size: 20px;
+}
+.c{
+    color: orangered;
+}
+span{
+    font-weight: bold;
+    color: red;
+}
+.d{
+    font-style: italic;
+}
+.e{
+    text-decoration: underline;
+}
+.f{
+    text-decoration: line-through;
+}
+.g,#a{
+    text-indent:2em;
+}
+.h{
+    line-height: 1.8em;
+}
+.i{
+    letter-spacing: 20px;
+}
+.j{
+    word-spacing: 20px;
+}
+
+/*part two*/
+.two{
+    background-color: darkseagreen;
+    text-indent: 2em;/*文字缩进2个单位*/
+}
+.aa{
+    line-height: 2em;
+}
+/*把ID为d的a标签由行内元素设置为块级元素*/
+#d{
+    width: 50%;
+    height: 10%;
+    border: solid 1px;
+    display: block;
+}
+/*把id为b和c的div块级元素设置为内联元素*/
+#b,#c{
+    width: 13%;
+    height: 10%;
+    border: solid 1px red;
+    display: inline;
+}
+/*将class="bb"的a标签由内联元素设置为内联块元素*/
+.bb{
+    width: 50px;
+    height: 10%;
+    border: solid 1px;
+    display: inline-block;
+    text-align: center;
+    text-decoration:none;
+}
+/*为h3标签设置一个下边框*/
+h3{
+    border-bottom: 2px green solid;
+}
+/*计算一个盒子模型的实际高度和宽度*/
+.box{
+    width: 300px;
+    height: 300px;
+    margin:10px;
+    padding: 10px;
+    border: 2px blue dotted;
+}
+
+/*part three*/
+.three{
+    background-color: burlywood;
+}
+/*两个div并排显示*/
+.left,.right{
+    width: 200px;
+    height: 50px;
+    border:2px black solid;
+    float: right;
+}
+/*设置div为绝对定位，相对于窗口向左移动10px，向下移动20px*/
+.absolute{
+    width: 200px;
+    height: 100px;
+    border: 1px black solid;
+    position:absolute;
+    right: 100px;
+    top: 20px;
+}
+/*设置div为相对定位  相对于原来的位置向右移动10px，
+向上移动10px。偏移前的位置保持不变*/
+.relative{
+    width: 200px;
+    height: 150px;
+    border: 1px black solid;
+    position: relative;
+    left: 60px;
+    bottom: 60px;
+}
+/*对div的位置设置为固定定位 设置在页面的右下角*/
+.fixed{
+    width: 200px;
+    height: 150px;
+    border: 1px red solid;
+    position: fixed;
+    right:0px;
+    bottom:0px;
+}
+/*结合两种定位方式*/
+div{
+    border: 1px green solid;
+}
+.box1{
+    width: 300px;
+    height: 50px;
+    position: relative;/*要为父级设置为相对定位*/
+}
+.box2{
+    width: 200px;
+    height: 35px;
+    position: absolute;
+    bottom:0px;
+}

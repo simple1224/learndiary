@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>如何用CSS进行网页布局</title>
+    <style>
+        /*part1 一列布局*/
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            height: 100px;
+            background-color: blue;
+
+        }
+        .main{
+            width: 800px;
+            height: 300px;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+        .foot{
+            width: 800px;
+            height: 100px;
+            background:#900;
+            margin: 0 auto;
+        }
+
+        /*part2 二列布局*/
+        .left{
+            width: 20%;
+            height: 500px;
+            float: left;
+            background: #ccc;
+        }
+        .right{
+            width: 80%;
+            height: 500px;
+            float: right;
+            background: #ddd;
+        }
+        .all{
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        /*part3 三列布局*/
+        .left1{
+            width: 200px;
+            height: 300px;
+            background: #99CCFF;
+            position: absolute;
+            left:0;
+            bottom:-197%;
+        }
+        .middle{
+            height: 300px;
+            background: #FFCCCC;
+            margin: 0 300px 0 200px;
+        }
+        .right1{
+            width: 300px;
+            height: 300px;
+            background: coral;
+            position: absolute;
+            bottom:-197%;
+            right:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="introduce">
+        <h1>CSS网页布局</h1>
+        <h2>什么叫布局</h2>
+        <p>布局又称为板式布局，是网页UI设计师将有限的视觉元素进行有机的排列组合。</p>
+        <h2>网页设计的特点</h2>
+        <p>1.网页可以自适应宽度 <br>
+            2.网页的长度理论上没有限制</p>
+        <h2>常见的布局</h2>
+        <p>分栏又称为分列，常见的布局分为：一列布局、二列布局、三列布局。现在常用的是混合布局。</p>
+    </div>
+<!--part 2-->
+    <div class="detail">
+        <h2>一列布局</h2>
+        <p>例如百度页面，一列布局不适合放置多行文本一般网页固定宽度</p>
+        <div class="top"></div>
+        <div class="main"></div>
+        <div class="foot"></div>
+
+        <h2>二列布局</h2>
+        <p>二列布局，一般不采用自适应，要固定宽度。浮动和绝对定位会让元素脱离文档流</p>
+        <div class="all">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+
+        <h2>三列布局</h2>
+        <p>做一个左右两边各有固定宽度的div，中间一个div自适应</p>
+        <div class="left1">left</div>
+        <div class="middle">middle</div>
+        <div class="right1">right</div>
+
+        <h2>混合布局</h2>
+        <p></p>
+    </div>
+</body>
+</html>
