@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css Sprite</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .all{
+            width: 300px;
+            height: 300px;
+            margin: 14% auto;
+            box-shadow: 0 1px 1px #CCC;
+            background: #AAA;
+            text-align: center;
+            padding-top: 60px;
+        }
+        input{
+            text-align: center;
+            margin: 10px;
+        }
+        a{
+            margin-left: 10px;
+        }
+        .img{
+            background:url("http://img.mukewang.com/539a972b00013e9102280177.jpg"),no-repeat;
+            width: 189px;
+            height: 38px;
+            margin-left: 49px;
+        }
+        .register{
+            background-position: 0 -37px;
+            margin-top: 13px;
+        }
+        .text{
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h3>登陆</h3>
+        <input type="text"  class="text" placeholder="邮箱/手机号/用户名"><br>
+        <input type="password" class="text" placeholder="请输入密码"><br>
+        <p>
+        <input type="radio">下次自动登陆
+        <a href="#">忘记密码</a>
+        </p>
+            <div class=" img login">
+
+            </div>
+            <div class=" img register">
+
+            </div>
+
+
+    </div>
+</body>
+</html>

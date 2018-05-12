@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript的入门篇</title>
+</head>
+<body>
+    <h1>JavaScript的入门知识</h1>
+    <h2>DOM操作</h2>
+    <p>即使用js来控制HTML元素和CSS的样式</p>
+    <h3>DOM：Document Object Model文档对象模型。是用来定义访问和处理HTML文档的标准方法。
+        DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树） 。
+        通过将HTML的代码分解为ＤＯＭ节点层次图。</h3>
+    <p>HTML文档是由节点构成的集合，三种常见的DOM节点有：元素节点（即是标签，比如body，p,hx），
+        文本节点(节点里显示的文字内容 )，属性节点（比如说a标签中href属性）</p>
+
+    <h3>通过ID获取元素：document.getElementById("id")</h3>
+    <p id="first element">hello world!</p>
+    <script>
+        var str= document.getElementById("first element");
+    //通过ID获取p标签。代码是顺序执行的，如果把script放在head中，则返回null  原因是先调用js，还没有id为first element元素
+        document.write(str);
+    </script>
+
+    <h3>innerHTML:用于获取或者更换元素的内容</h3>
+    <p>语法：Object.innerHTML</p>
+    <script>
+        var str1 = document.getElementById("first element");
+        document.write("p标签的内容是:"+str1.innerHTML+"<br>");
+        str1.innerHTML = "hello everybody.";
+        document.write("p标签修改后的内容是："+str1.innerHTML);
+        str1.style.color="red";//用js来设置p标签的样式
+        str1.style.fontSize="32px";
+        str1.style.background="blue";
+
+    </script>
+    <h3>改变HTML样式：用js改变HTML元素的样式</h3>
+    <p>语法：object.style.proper=new style</p>
+    <p>proper一般有backgroundColor，height，width，font，color等</p>
+
+    <h3>显示和隐藏</h3>
+    <p>语法：Object.style.display = value ,value的取值是none和block</p>
+    <p id="second element" class="second">I am a pretty gril.</p>
+    <form action="post">
+        <input type="button" onclick="show()" value="显示">
+        <input type="button" onclick="hide()" value="隐藏">
+    </form>
+    <script>
+        function show() {
+            var str2 = document.getElementById("second element").style.display="block";
+        }
+        function hide() {
+            var str2 = document.getElementById("second element").style.display="none";
+        }
+        var str3 = document.getElementById("second element");
+        document.write("p标签的class值为："+str3.className+"<br>");
+        str3.className = "two";
+        document.write("更改后的p标签的class值为："+str3.className);
+    </script>
+
+    <h3>控制类名（className属性）</h3>
+    <p>语法：Object.className = className</p>
+
+    <h3>注意使用removeAttribute这个属性</h3>
+
+</body>
+</html>

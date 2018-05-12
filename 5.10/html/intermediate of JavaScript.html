@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 进阶篇</title>
+</head>
+<body>
+    <h1>JavaScript 进阶篇</h1>
+    <script>
+        document.write("sgdshjsf");
+        alert("ghgjgfjksfl");
+    </script>
+    <h2>JS基础语法</h2>
+    <h3>变量命名的规则</h3>
+    <li>1.必须以字母、下划线、$符号开头</li>
+    <li>2.不能用js的关键字和保留字作为变量名</li>
+    <li>3.严格区分大小写</li>
+    <h3>变量声明</h3>
+    <p>语法;var num1,num2;</p>
+    <p>注意的是变量可以不声明就使用，但是按照规范一般都是先声明后使用</p>
+    <h3>变量赋值</h3>
+    <p>可以先声明后赋值，也可以声明的同时进行赋值。“=”的作用就是给变量赋值 <br>
+    js是一种弱类型的语言，var关键字可以定义任何类型的变量，比如数值型，布尔型，字符串等等</p>
+    <h3>表达式：就是将常量和变量连接起来的表达式。比如有串表达式、数值表达式、布尔表达式</h3>
+    <!--e.g.小明有10元钱，买了一个本，花了5元，小红说:"你剩下的钱加上我的6元钱，就可以买个铅笔盒了。-->
+    <script>
+        var num1 = 10 - 5;
+        num2 = num1 + 6;
+        document.write("小明还剩:"+num1+"元"+"<br>");
+        document.write("小红花:"+num2+"元买个铅笔盒");
+    </script>
+    <h3>操作符</h3>
+    <p>一般包括算数操作符（+、-、*、/）、比较操作符(<、>、>=)、逻辑操作符(&&、||、！)</p>
+    <p>"="操作符是赋值不是等于，"+"操作符不止是代表加法，也可以连接两个字符串</p>
+    <p>自加一“++”和自减一“--”:本质就是原来的数上加一和减一的操作。</p>
+    <p>比较操作符：即大于小于等，返回的结果是true或false</p>
+    <p>逻辑与操作符：&&是与的逻辑运算符，只有当条件都为真时表达式才是真。<br>
+        ||是或的逻辑运算符，只要有一个条件是真的，表达式就是真的。<br>
+        !是逻辑非运算符，表达式本来是true，加！之后变为false</p>
+    <p>操作符的优先级：算术操作符>比较操作符>逻辑操作符>赋值“=”<br>
+        如果需要改变运算顺序，可以加小括号解决</p>
+    <script>
+        var num1 = 4;
+        var num2 = 10;
+        num1++;
+        num2--;
+        document.write(num1,"<br>",num2,"<br>");
+        document.write(num1<num2,"<br>");//输出为true。
+        if(num1>=3&&num2>5){
+            document.write("你正确输出了","<br>");
+        }
+        var str =  !(num1>num2);
+        document.write("str的值是"+str+"<br>");
+        var num3 = num1 * 2 > 10 && num2 * 2 < 50;
+        document.write(num3);
+    </script>
+
+    <h2>数组</h2>
+    <h3>什么是数组</h3>
+    <p>数组是所有值的集合，每一个值都有一个固定的索引，索引从0开始。</p>
+    <p>语法：var 数组名 = new Array(数组长度)</p>
+    <p>需要注意的是:如果创建的数组是空的，则输出undefined。<br>
+        即使创建数组时设置了长度，也可以将元素输入到规定的长度之外。</p>
+    <script>
+        var myarray = new Array();//设置数组的第一种方式
+        myarray[0] = 55;
+        myarray[1] = 88;
+        myarray[2] = 70;
+        myarray[3] = 66;
+        var marry1 = new Array('a','b','c','d','e');//设置数组的第二种方式
+        var marry2 = [1,2,3,4,5];//设置数组的第三种方式
+        document.write(myarray,"<br>",marry1,"<br>",marry2,"<br>");
+        document.write("第二个成绩是："+myarray[1],"<br>");
+        document.write("marry数组的长度是："+marry1.length);
+    </script>
+    <h3>二维数组</h3>
+    <p>二维数组的表示: myarray[ ][ ]</p>
+    <p>定义方式有两种</p>
+    <script>
+        var twoarray = new Array();//先声明一维数组
+        for(var i=0;i<2;i++){//一维数组的长度为2
+            twoarray[i] = new Array();//再声明二维数组
+            for(var j=0;j<3;j++){//二维数组的长度为3
+                twoarray[i][j] = i+j;//对二维数组进行赋值，每个数组的元素为i+j;
+            }
+        }
+        document.write(twoarray+"<br>");
+        var twoarry2 = [[1,2,3],[4,5,6]];
+        document.write(twoarry2,"<br>");
+    //e.g
+        var arr = ['*','**','***','****','*****'];
+        for(var i=0;i<arr.length;i++){
+            document.write(arr[i]+"<br>");
+        }
+    </script>
+
+    <h2>流程控制语句</h2>
+    <h3>if语句：</h3>
+        <p><pre>
+        if(条件)
+        { 条件成立时执行代码}</pre>
+        注意：if必须是小写</p>
+    <script>
+        var arr1 = 59;
+        if(arr1<60){
+            document.write("不及格！")
+        }else if(70<arr1<80){
+            document.write("良好！")
+        }
+        else{
+            document.write("恭喜你，及格了！")
+        }
+    </script>
+    <h3>Switch语句</h3>
+    <pre>
+        switch(表达式){
+            case值1:
+            执行代码块 1
+            break;
+            case值2:
+            执行代码块 2
+            break;
+            ...
+        case值n:
+        执行代码块 n
+        break;
+        default:
+        与 case值1 、 case值2...case值n 不同时执行的代码
+}
+    </pre>
+</body>
+</html>
